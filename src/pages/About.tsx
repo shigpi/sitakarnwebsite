@@ -14,6 +14,7 @@ import { fadeUp, staggerContainer, staggerItem } from '@/theme/animations';
 import { images } from '@/assets/images';
 import { partnersData } from '@/data/partners';
 import { company } from '@/config/company';
+import { aboutHero, aboutStory, aboutCertifications, coreValues } from '@/data/about';
 
 export function About() {
   useSEO({
@@ -30,13 +31,13 @@ export function About() {
             <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="flex flex-col gap-6">
               <motion.div variants={fadeUp} className="flex items-center gap-3">
                 <Divider theme="dark" />
-                <span className="eyebrow text-white/70">Our Story</span>
+                <span className="eyebrow text-white/70">{aboutHero.eyebrow}</span>
               </motion.div>
               <motion.h1 variants={fadeUp} className="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
-                Building Financial Resilience Since {company.established}
+                {aboutHero.headlinePrefix} {company.established}
               </motion.h1>
               <motion.p variants={fadeUp} className="text-lg text-white/60 leading-relaxed">
-                Sitakarn was founded with a singular purpose: to bring institutional-quality financial advisory services to cooperatives, NGOs, and SMEs across Thailand.
+                {aboutHero.subheadline}
               </motion.p>
             </motion.div>
           </div>
@@ -54,21 +55,15 @@ export function About() {
               variants={staggerContainer}
               className="flex flex-col gap-6"
             >
-              <SectionTitle title="A Commitment to Clarity" showRule={false} />
-              <motion.p variants={fadeUp} className="text-slate-600 leading-relaxed">
-                For nearly two decades, we have witnessed the profound impact that sound financial management has on organizations and their communities. When cooperatives thrive, their members prosper. When NGOs are financially transparent, donor trust increases.
-              </motion.p>
-              <motion.p variants={fadeUp} className="text-slate-600 leading-relaxed">
-                We approach every engagement not just as accountants, but as educators and partners. Our goal is never just to complete an audit or file a tax return; it is to leave your organization stronger, more knowledgeable, and better equipped for the future than we found it.
-              </motion.p>
+              <SectionTitle title={aboutStory.title} showRule={false} />
+              {aboutStory.paragraphs.map((para, i) => (
+                <motion.p key={i} variants={fadeUp} className="text-slate-600 leading-relaxed">
+                  {para}
+                </motion.p>
+              ))}
               
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {[
-                  { title: 'Integrity', desc: 'Uncompromising professional ethics in every engagement.' },
-                  { title: 'Clarity', desc: 'Translating complex financial concepts into actionable insights.' },
-                  { title: 'Partnership', desc: 'Investing in long-term organizational success.' },
-                  { title: 'Excellence', desc: 'Rigorous adherence to accounting standards and regulations.' },
-                ].map((value) => (
+                {coreValues.map((value) => (
                   <motion.div key={value.title} variants={fadeUp} className="flex gap-3">
                     <CheckCircle className="text-gold-500 flex-shrink-0" size={20} />
                     <div>
@@ -102,9 +97,9 @@ export function About() {
       <SectionWrapper padding="lg" background="offwhite">
         <Container>
           <SectionTitle
-            eyebrow="Accreditation"
-            title="Professional Standards"
-            description="Our practice is governed by the highest professional standards and recognized by Thailand's leading regulatory bodies."
+            eyebrow={aboutCertifications.eyebrow}
+            title={aboutCertifications.title}
+            description={aboutCertifications.description}
             align="center"
             className="mx-auto mb-16"
           />
