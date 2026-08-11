@@ -1,0 +1,65 @@
+/**
+ * Input Component
+ * Accessible form input with label, error, and helper text.
+ */
+
+import React, { forwardRef } from 'react';
+import { cn } from '@/utils/cn';
+
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+  error?: string;
+  helperText?: string;
+  id: string;
+}
+
+export const Input = forwardRef<HTMLInputElement, InputProps>(
+  ({ label, error, helperText, id, className, required, ...props }, ref) => {
+    return (
+      <div className="flex flex-col gap-1.5">
+        {label && (
+          <label
+            htmlFor={id}
+            className="text-sm font-medium text-slate-700"
+          >
+            {label}
+            {required && (
+              <span className="text-red-500 ml-1" aria-hidden="true">*</span>
+            )}
+          </label>
+        )}
+        <input
+          ref={ref}
+          id={id}
+          className={cn(
+            'w-full px-4 py-2.5 text-sm',
+            'border rounded',
+            'bg-white text-slate-700 placeholder:text-slate-400',
+            'transition-colors duration-150',
+            'focus:outline-none focus:ring-2 focus:ring-brick-600 focus:border-brick-600',
+            error
+              ? 'border-red-400 focus:ring-red-500 focus:border-red-500'
+              : 'border-slate-300 hover:border-slate-400',
+            className
+          )}
+          aria-describedby={error ? `${id}-error` : helperText ? `${id}-helper` : undefined}
+          aria-invalid={error ? 'true' : undefined}
+          required={required}
+          {...props}
+        />
+        {error && (
+          <p id={`${id}-error`} className="text-xs text-red-600" role="alert">
+            {error}
+          </p>
+        )}
+        {helperText && !error && (
+          <p id={`${id}-helper`} className="text-xs text-slate-500">
+            {helperText}
+          </p>
+        )}
+      </div>
+    );
+  }
+);
+
+Input.displayName = 'Input';

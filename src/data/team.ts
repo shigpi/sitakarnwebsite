@@ -1,0 +1,118 @@
+/**
+ * Team Data
+ * To add a team member: add an entry to this array.
+ * Photo URLs reference the centralized images registry (assets/images.ts).
+ */
+
+import type { TeamMember } from '@/types';
+import { images } from '@/assets/images';
+
+export const teamData: TeamMember[] = [
+  // ─── Leadership ────────────────────────────────────────────────────────────
+  {
+    id: 'tm-1',
+    name: 'Wanchai Phongphaiboon',
+    title: 'Founder & Managing Director',
+    department: 'Leadership',
+    role: 'leadership',
+    bio: 'With over 25 years in financial consulting and cooperative advisory, Khun Wanchai founded Sitakarn in 2005 with a singular mission: to bring institutional-quality financial services to cooperatives across Thailand. A graduate of Chulalongkorn University and a Certified Public Accountant, he has advised more than 200 cooperatives and served on the advisory board of the Federation of Savings and Credit Cooperatives of Thailand.',
+    qualifications: ['CPA (Certified Public Accountant)', 'B.Acc. Chulalongkorn University', 'M.B.A. Thammasat University'],
+    imageUrl: images.team.member1,
+    linkedin: 'https://linkedin.com/in/wanchai-phongphaiboon',
+    yearsOfExperience: 25,
+    specializations: ['Cooperative Governance', 'Strategic Financial Planning', 'M&A Advisory'],
+  },
+  {
+    id: 'tm-2',
+    name: 'Siriporn Ratanamanee',
+    title: 'Deputy Director & Head of Audit',
+    department: 'Audit Services',
+    role: 'leadership',
+    bio: 'Khun Siriporn leads the firm\'s audit practice with a reputation for meticulous thoroughness and clear communication. Before joining Sitakarn, she spent twelve years at a Big Four firm specializing in financial services audit. She holds a CPA, is a member of the Thai Institute of Directors, and has authored training materials used across the cooperative sector.',
+    qualifications: ['CPA (Certified Public Accountant)', 'CIA (Certified Internal Auditor)', 'B.Acc. Kasetsart University'],
+    imageUrl: images.team.member2,
+    linkedin: 'https://linkedin.com/in/siriporn-ratanamanee',
+    yearsOfExperience: 18,
+    specializations: ['Statutory Audit', 'Internal Controls', 'Risk Management'],
+  },
+  {
+    id: 'tm-3',
+    name: 'Nattapong Chaiwat',
+    title: 'Head of Tax Consulting',
+    department: 'Tax Services',
+    role: 'leadership',
+    bio: 'Khun Nattapong joined Sitakarn in 2010 after a decade at the Revenue Department, bringing an insider\'s understanding of Thai tax administration. He specializes in cooperative-specific tax matters, particularly the optimization of surplus distribution and the application of tax exemptions unique to registered cooperatives. His Revenue Department experience makes him exceptionally effective in representing clients during assessments.',
+    qualifications: ['LL.B. Ramkhamhaeng University', 'M.Tax. Thammasat University', 'Tax Auditor License'],
+    imageUrl: images.team.member3,
+    linkedin: 'https://linkedin.com/in/nattapong-chaiwat',
+    yearsOfExperience: 20,
+    specializations: ['Corporate Tax', 'VAT', 'Tax Dispute Resolution', 'Cooperative Tax Exemptions'],
+  },
+  {
+    id: 'tm-4',
+    name: 'Kulthida Wimonphan',
+    title: 'Head of Cooperative Advisory',
+    department: 'Cooperative Services',
+    role: 'leadership',
+    bio: 'Khun Kulthida is widely regarded as one of Thailand\'s leading experts on cooperative law and governance. With a background in law and public administration, she advises cooperatives on regulatory compliance, bylaw development, and governance reforms. She has guided the formation of over 50 new cooperatives and conducted governance assessments for the Cooperative Promotion Department.',
+    qualifications: ['LL.B. Chiang Mai University', 'MPA Sukhothai Thammathirat Open University', 'Certified Cooperative Advisor'],
+    imageUrl: images.team.member4,
+    linkedin: 'https://linkedin.com/in/kulthida-wimonphan',
+    yearsOfExperience: 16,
+    specializations: ['Cooperative Law', 'Governance', 'Regulatory Compliance', 'Formation Advisory'],
+  },
+
+  // ─── Consultants ───────────────────────────────────────────────────────────
+  {
+    id: 'tm-5',
+    name: 'Somchai Tanakorn',
+    title: 'Senior Financial Consultant',
+    department: 'Financial Consulting',
+    role: 'consultant',
+    bio: 'Khun Somchai specializes in financial planning and budget management for large agricultural cooperatives. He has worked extensively with rice, sugarcane, and rubber farmer cooperatives across the Central and Northeastern regions.',
+    qualifications: ['B.Acc. Khon Kaen University', 'CPA candidate'],
+    imageUrl: images.team.member5,
+    linkedin: 'https://linkedin.com/in/somchai-tanakorn',
+    yearsOfExperience: 10,
+    specializations: ['Agricultural Finance', 'Budget Management', 'Financial Planning'],
+  },
+  {
+    id: 'tm-6',
+    name: 'Wilawan Srisuk',
+    title: 'Senior Accounting Consultant',
+    department: 'Accounting Services',
+    role: 'consultant',
+    bio: 'Khun Wilawan manages accounting engagements for savings & credit cooperatives, with deep expertise in member ledger systems, savings product accounting, and loan loss provisioning.',
+    qualifications: ['B.Acc. Srinakharinwirot University', 'CPA'],
+    imageUrl: images.team.member6,
+    linkedin: 'https://linkedin.com/in/wilawan-srisuk',
+    yearsOfExperience: 9,
+    specializations: ['Cooperative Accounting', 'Savings & Loan Systems', 'TFRS for SMEs'],
+  },
+  {
+    id: 'tm-7',
+    name: 'Phakorn Jirapan',
+    title: 'Tax Consultant',
+    department: 'Tax Services',
+    role: 'consultant',
+    bio: 'Khun Phakorn handles ongoing tax compliance for a portfolio of SME and cooperative clients. Known for his meticulous approach to documentation and his ability to explain complex tax matters in simple terms.',
+    qualifications: ['B.Acc. Rangsit University', 'Tax Advisor License'],
+    imageUrl: images.team.member7,
+    linkedin: 'https://linkedin.com/in/phakorn-jirapan',
+    yearsOfExperience: 7,
+    specializations: ['Corporate Tax', 'VAT Compliance', 'Payroll Tax'],
+  },
+  {
+    id: 'tm-8',
+    name: 'Naruemon Sompong',
+    title: 'Training & Development Specialist',
+    department: 'Training Programs',
+    role: 'consultant',
+    bio: 'Khun Naruemon designs and delivers financial literacy and compliance training programs for cooperative board members and staff. She has trained over 3,000 participants across all cooperative types and is a regular speaker at the National Cooperative Summit.',
+    qualifications: ['M.Ed. Chulalongkorn University', 'Certified Adult Trainer'],
+    imageUrl: images.team.member8,
+    linkedin: 'https://linkedin.com/in/naruemon-sompong',
+    yearsOfExperience: 11,
+    specializations: ['Financial Literacy Training', 'Board Development', 'E-Learning Design'],
+  },
+];

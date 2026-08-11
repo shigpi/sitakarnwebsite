@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+/* ─── Design System Tokens ───────────────────────────────────────────────── */
+/*                                                                            */
+/*  BRAND PALETTE: Brick Red · Deep Navy · Warm Gold                         */
+/*                                                                            */
+/*  COLOR USAGE RULES:                                                        */
+/*    brick-*   primary — CTAs, active states, accents on light bg            */
+/*    navy-*    backgrounds, headings, structural dark areas                  */
+/*    gold-*    accent ONLY on white/cream/light bg — NEVER on navy           */
+/*    On navy sections: use white and brick-200/300 as accents                */
+/*                                                                            */
+
+@theme {
+  /* ── Brick Red (Primary) ──────────────────────────────────────────────── */
+  --color-brick-50:  #FDF4F4;
+  --color-brick-100: #F5DADA;
+  --color-brick-200: #E8B0B0;
+  --color-brick-300: #D47575;
+  --color-brick-400: #C04040;
+  --color-brick-500: #A52020;
+  --color-brick-600: #8B1A1A;
+  --color-brick-700: #6E1212;
+  --color-brick-800: #500D0D;
+  --color-brick-900: #330808;
+
+  /* ── Deep Navy (Secondary) ────────────────────────────────────────────── */
+  --color-navy-50:  #ECEEF6;
+  --color-navy-100: #CED3E9;
+  --color-navy-200: #A8B2D8;
+  --color-navy-300: #8391C6;
+  --color-navy-400: #5E71B4;
+  --color-navy-500: #3D549E;
+  --color-navy-600: #2A3D87;
+  --color-navy-700: #0D1B5E;
+  --color-navy-800: #091450;
+  --color-navy-900: #050D3A;
+
+  /* ── Warm Gold (Accent — light bg only) ──────────────────────────────── */
+  --color-gold-50:  #FFFBE8;
+  --color-gold-100: #FFF3C4;
+  --color-gold-200: #FFE680;
+  --color-gold-300: #FFD700;
+  --color-gold-400: #F5C518;
+  --color-gold-500: #C9960C;
+  --color-gold-600: #A37A08;
+  --color-gold-700: #7D5D05;
+  --color-gold-800: #574102;
+  --color-gold-900: #302400;
+
+  /* ── Warm Neutrals / Slate ────────────────────────────────────────────── */
+  --color-slate-50:  #F8F5F2;
+  --color-slate-100: #F2EFEC;
+  --color-slate-200: #E4DDD9;
+  --color-slate-300: #CCC5C0;
+  --color-slate-400: #9E9490;
+  --color-slate-500: #716660;
+  --color-slate-600: #524943;
+  --color-slate-700: #2D2521;
+  --color-slate-800: #1A1410;
+  --color-slate-900: #100C09;
+
+  --color-offwhite:  #FBF9F7;
+  --color-lightgray: #EEE9E6;
+  --color-midgray:   #B0A8A4;
+
+  /* ── Typography ───────────────────────────────────────────────────────── */
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-body:    "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:    "JetBrains Mono", "Fira Code", monospace;
+
+  /* ── Shadows (warm-tinted) ────────────────────────────────────────────── */
+  --shadow-xs:      0 1px 2px 0 rgba(45, 37, 33, 0.06);
+  --shadow-sm:      0 1px 3px 0 rgba(45, 37, 33, 0.09), 0 1px 2px -1px rgba(45, 37, 33, 0.05);
+  --shadow-base:    0 4px 6px -1px rgba(45, 37, 33, 0.08), 0 2px 4px -2px rgba(45, 37, 33, 0.04);
+  --shadow-md:      0 8px 16px -4px rgba(45, 37, 33, 0.11), 0 4px 6px -2px rgba(45, 37, 33, 0.05);
+  --shadow-lg:      0 16px 32px -8px rgba(45, 37, 33, 0.13), 0 8px 16px -4px rgba(45, 37, 33, 0.06);
+  --shadow-xl:      0 24px 48px -12px rgba(45, 37, 33, 0.16);
+  --shadow-gold:    0 4px 20px -2px rgba(197, 157, 12, 0.32);
+  --shadow-brick:   0 8px 24px -4px rgba(139, 26, 26, 0.28);
+  --shadow-navy:    0 8px 24px -4px rgba(13, 27, 94, 0.28);
+}
+
+/* ─── Dark Mode ───────────────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --color-offwhite:  #1A1410;
+  --color-lightgray: #2D2521;
+}
+
+/* ─── Global Reset & Base ─────────────────────────────────────────────────── */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.625;
+    color: var(--color-slate-700);
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  /* ── Typography Base ──────────────────────────────────────────────────── */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-navy-700);
+    letter-spacing: -0.02em;
+  }
+
+  h1 { font-size: clamp(2rem, 4vw, 3.5rem); }
+  h2 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+  h3 { font-size: clamp(1.25rem, 2.5vw, 1.875rem); }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.125rem; }
+  h6 { font-size: 1rem; }
+
+  p {
+    line-height: 1.75;
+    color: var(--color-slate-600);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  ul, ol {
+    list-style: none;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+  }
+}
+
+/* ─── Utility Classes ─────────────────────────────────────────────────────── */
+
+/* The "Double Rule" — signature design element */
+.double-rule {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 2.5rem;
+}
+
+.double-rule::before,
+.double-rule::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.double-rule::before {
+  width: 100%;
+}
+
+.double-rule::after {
+  width: 60%;
+}
+
+/*
+ * Eyebrow labels:
+ *   - On light bg  → gold-600
+ *   - On dark navy → white (via text-white class in component)
+ *   - On brick/red → white
+ */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold-600);
+}
+
+/* Smooth image loading */
+.img-smooth {
+  transition: opacity 0.3s ease;
+}
+
+.img-smooth[loading="lazy"] {
+  opacity: 0;
+}
+
+.img-smooth.loaded {
+  opacity: 1;
+}
+
+/* ─── Reduced Motion ──────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Print Styles ────────────────────────────────────────────────────────── */
+@media print {
+  nav,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+}
