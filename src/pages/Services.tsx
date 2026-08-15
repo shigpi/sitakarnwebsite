@@ -17,7 +17,7 @@ import { fadeUp, staggerContainer } from '@/theme/animations';
 export function Services() {
   useSEO({
     title: 'Our Services',
-    description: 'Comprehensive financial consulting, accounting, audit, and tax services for cooperatives and organizations.',
+    description: 'Professional real estate brokerage, property due diligence, and financial advisory services for cooperatives, buyers, sellers, and institutions across Nepal.',
   });
 
   const { data: servicesRes } = useQuery({ queryKey: ['services'], queryFn: ServicesAPI.getAll });
@@ -33,10 +33,10 @@ export function Services() {
                 <span className="eyebrow">Our Capabilities</span>
               </motion.div>
               <motion.h1 variants={fadeUp} className="font-display font-bold text-4xl md:text-5xl text-navy-700 leading-tight">
-                Specialized Financial Services
+                Property & Financial Services
               </motion.h1>
               <motion.p variants={fadeUp} className="text-lg text-slate-600 leading-relaxed">
-                We provide end-to-end financial solutions tailored to the unique regulatory and operational realities of cooperatives, SMEs, and NGOs.
+                Sitakarn Mortgage Pvt. Ltd. offers two integrated pillars of professional service: structured <strong>Real Estate Brokerage & Realtor Services</strong> for property buyers, sellers, and investors across Nepal; and specialized <strong>Professional Advisory Services</strong> for financial intermediaries and cooperatives. Both delivered with transparency, compliance, and technology-enabled precision.
               </motion.p>
             </motion.div>
           </div>

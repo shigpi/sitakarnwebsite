@@ -10,18 +10,19 @@ export interface CoreValue {
 
 export const aboutHero = {
   eyebrow: 'Who We Are',
-  headlinePrefix: 'Strengthening Financial Health Since',
+  headlinePrefix: 'Nepal\'s Trusted Financial & Property Services Partner Since',
   subheadline:
-    'Sitakarn’s financial Intermediaries Advisory & Transformation Services is a Nepal-based professional consulting firm dedicated exclusively to strengthening the financial health, governance, operational efficiency, and long-term sustainability of financial intermediaries and Savings and Credit Cooperatives (SACCOs) across Nepal.',
+    'Sitakarn Mortgage Pvt. Ltd. is Nepal\'s pioneering professional firm combining expert financial intermediary advisory for cooperatives and organizations with a structured, technology-enabled real estate brokerage — delivering transparent, compliant, and client-centered solutions across Nepal.',
 };
 
 export const aboutStory = {
   title: 'Our Purpose & Vision',
   paragraphs: [
-    'Our purpose is to help financial intermediaries become professionally managed, financially resilient, member-focused, ethically governed, and fully compliant institutions that protect members\' savings, strengthen public confidence, and contribute to Nepal\'s inclusive economic development.',
-    'Combining international banking and financial analytical expertise with practical implementation support, Sitakarn delivers independent, results-oriented advisory services that enable cooperatives to build resilient, transparent, and financially sound institutions.',
-    'Vision: To become Nepal\'s leading financial and cooperative advisory and transformation firm recognized for strengthening financial resilience, governance excellence, and sustainable growth across the financial sector.',
-    'Mission: To provide innovative, practical, and results-driven advisory services that improve financial performance, strengthen governance, enhance operational excellence, and build sustainable financial institutions through professional expertise, capacity building, and continuous performance improvement.',
+    'Established in 2003, Sitakarn is recognized as Nepal\'s pioneering registered real estate brokerage and mortgage service provider, known for introducing online property services and delivering transparent, professional, and customer-focused solutions.',
+    'Our Financial Advisory arm is dedicated to strengthening the financial health, governance, operational efficiency, and long-term sustainability of financial intermediaries and Savings and Credit Cooperatives (SACCOs) across Nepal — combining international banking expertise with practical implementation support.',
+    'Our Real Estate Brokerage arm operates as a professional intermediary connecting genuine property sellers with qualified buyers through a structured 20-step transaction process, rigorous due diligence, AML/CFT compliance, and a technology-enabled verified property database.',
+    'Vision: To become one of Nepal\'s most trusted, professional and compliance-driven real estate brokerage and financial advisory service firms — connecting genuine buyers and sellers through transparent, technology-enabled and legally responsible services.',
+    'Mission: To make buying, selling, and managing property and financial institutions in Nepal safer, more transparent, and professionally managed by delivering reliable listings, verification, due diligence, market information, and institutional strengthening.',
   ],
 };
 
@@ -70,7 +71,7 @@ export const coreValues: CoreValue[] = [
 
 export const aboutCertifications = {
   eyebrow: 'Accreditation & Quality',
-  title: 'Professional Standards',
+  title: 'Professional Standards & Compliance',
   description:
-    "Our practice is governed by the highest professional standards and recognized by regulatory bodies. Combining international banking and financial analytical expertise with practical implementation support.",
+    'Our practice is governed by the highest professional standards. Sitakarn maintains robust systems for tax compliance, AML/CFT, accounting, auditing, and secure data management — covering both our financial advisory and real estate brokerage operations under applicable Nepalese laws and regulatory requirements.',
 };

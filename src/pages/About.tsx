@@ -93,6 +93,62 @@ export function About() {
         </Container>
       </SectionWrapper>
 
+      {/* ─── REAL ESTATE BROKERAGE HIGHLIGHT ──────────────────────────────────── */}
+      <SectionWrapper padding="lg" background="navy" className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-800 via-navy-700 to-brick-800 opacity-95" aria-hidden="true" />
+        <Container className="relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-50px' }}
+              variants={staggerContainer}
+              className="flex flex-col gap-6"
+            >
+              <motion.div variants={fadeUp} className="flex items-center gap-3">
+                <Divider theme="dark" />
+                <span className="eyebrow text-white/70">Real Estate Brokerage</span>
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="font-display font-bold text-3xl md:text-4xl text-white leading-tight">
+                Nepal's Professional Property Transaction Partner
+              </motion.h2>
+              <motion.p variants={fadeUp} className="text-white/70 leading-relaxed">
+                Sitakarn Mortgage Pvt. Ltd. operates as a professional real estate intermediary connecting property owners with genuine buyers through transparent, ethically managed brokerage services. Our structured 20-step transaction process covers everything from seller registration and KYC to government title transfer and commission settlement.
+              </motion.p>
+              <motion.p variants={fadeUp} className="text-white/70 leading-relaxed">
+                Every listed property receives a unique <strong className="text-white">Sitakarn Property Identification Number (SPIN)</strong> and is classified under our due diligence framework — <em>Category A (Verified)</em>, <em>Category B (Verification Pending)</em>, or <em>Category C (Restricted/Rejected)</em> — ensuring buyers are always protected by our "No Clear Title – No Transaction Recommendation" principle.
+              </motion.p>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-50px' }}
+              variants={staggerContainer}
+              className="grid grid-cols-2 gap-4"
+            >
+              {[
+                { label: 'Verified Property Listings', icon: '🏠', desc: 'Every property reviewed before being promoted to buyers' },
+                { label: 'AI Buyer–Property Matching', icon: '🔗', desc: 'Smart matching engine connects requirements to available properties' },
+                { label: 'AML/CFT Compliant', icon: '🛡️', desc: 'Formal KYC, source-of-funds review, and Banking Channel First policy' },
+                { label: '20-Step Transaction Process', icon: '📋', desc: 'From seller registration to title transfer — fully documented' },
+                { label: 'SPIN Property Database', icon: '🗄️', desc: 'Centralized, technology-enabled verified property database' },
+                { label: 'Professional Partner Network', icon: '🤝', desc: 'Lawyers, valuers, surveyors, banks, and government liaisons' },
+              ].map((item) => (
+                <motion.div
+                  key={item.label}
+                  variants={fadeUp}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/15 transition-colors"
+                >
+                  <div className="text-2xl mb-2">{item.icon}</div>
+                  <h4 className="font-semibold text-white text-sm mb-1">{item.label}</h4>
+                  <p className="text-white/50 text-xs leading-relaxed">{item.desc}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </Container>
+      </SectionWrapper>
+
       {/* ─── CERTIFICATIONS ───────────────────────────────────────────────────── */}
       <SectionWrapper padding="lg" background="offwhite">
         <Container>

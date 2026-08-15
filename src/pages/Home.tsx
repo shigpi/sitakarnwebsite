@@ -28,7 +28,7 @@ import { blogData } from '@/data/blog';
 export function Home() {
   useSEO({
     title: 'Home',
-    description: 'Trusted Financial Guidance for Cooperatives & Organizations',
+    description: 'Nepal\'s pioneering professional real estate brokerage and financial advisory firm — transparent, technology-enabled, and legally compliant services.',
   });
 
   const { data: heroRes } = useQuery({ queryKey: ['hero'], queryFn: HomepageAPI.getHero });
@@ -110,7 +110,7 @@ export function Home() {
           <SectionTitle
             eyebrow="Target Audience"
             title="Who We Serve"
-            description="We provide specialized services tailored to the unique regulatory and operational realities of different organizational structures."
+            description="From property buyers and sellers to cooperatives, banks, and SMEs — Sitakarn delivers tailored real estate brokerage and financial advisory solutions across Nepal."
             align="center"
             className="mx-auto mb-16"
           />
@@ -139,8 +139,8 @@ export function Home() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
             <SectionTitle
               eyebrow="Our Expertise"
-              title="Comprehensive Financial Services"
-              description="From day-to-day accounting to strategic advisory, our services cover the complete financial lifecycle."
+              title="Comprehensive Property & Financial Services"
+              description="From verified property listings and buyer matching to financial advisory for cooperatives — Sitakarn covers the complete lifecycle."
             />
             <Button as="a" href="/services" variant="outline" rightIcon={<ArrowRight size={16} />} className="flex-shrink-0">
               View All Services
@@ -171,8 +171,8 @@ export function Home() {
               <SectionTitle
                 theme="dark"
                 eyebrow="Why Sitakarn"
-                title="A Partner, Not Just a Provider"
-                description="We measure our success by the financial stability and growth of the organizations we serve. Our approach combines technical rigor with practical understanding."
+                title="Nepal's Professional Property & Financial Partner"
+                description="Established in 2003, Sitakarn combines pioneering real estate brokerage with expert financial advisory — built on transparency, compliance, and technology-enabled service delivery."
                 className="mb-12"
               />
               <motion.div
@@ -223,8 +223,8 @@ export function Home() {
             <div className="lg:col-span-5 lg:sticky lg:top-32 self-start">
               <SectionTitle
                 eyebrow="How We Work"
-                title="Our Consulting Process"
-                description="We follow a structured methodology that ensures every engagement delivers clear value, actionable recommendations, and measurable results."
+                title="Our Structured Process"
+                description="From initial assessment and property verification to title transfer and compliance — our 20-step transaction and advisory methodology delivers measurable, legally compliant results."
               />
             </div>
             <div className="lg:col-span-6 lg:col-start-7">
@@ -291,10 +291,10 @@ export function Home() {
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,_rgba(212,117,117,0.3)_0%,_transparent_60%)]" aria-hidden="true" />
         <Container className="relative z-10 text-center">
           <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-6">
-            Ready to strengthen your financial foundation?
+            Ready to buy, sell, or strengthen your financial foundation?
           </h2>
           <p className="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
-            Contact us for a complimentary initial consultation. We'll discuss your challenges and outline how we can help.
+            Contact us for a complimentary initial consultation. Whether you are buying or selling property, or strengthening a financial institution, we are here to help.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button as="a" href="/contact" size="lg" className="bg-white text-brick-700 hover:bg-brick-50 border border-white/30">

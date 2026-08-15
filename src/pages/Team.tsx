@@ -46,21 +46,25 @@ export function Team() {
       </SectionWrapper>
 
       {/* Leadership */}
-      <SectionWrapper padding="lg" background="white">
-        <Container>
-          <SectionTitle eyebrow="Partners" title="Leadership Team" className="mb-12" />
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-50px' }}
-            variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
-          >
-            {leadershipRes?.data.map((member) => (
-              <TeamCard key={member.id} member={member} variant="leadership" />
-            ))}
-          </motion.div>
-        </Container>
+      <SectionWrapper padding="none" background="white">
+        {/* Section header — contained */}
+        <div className="py-16 md:py-20">
+          <Container>
+            <SectionTitle eyebrow="Partners" title="Leadership Team" />
+          </Container>
+        </div>
+
+        {/* Full-bleed leader rows */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+          className="flex flex-col"
+        >
+          {leadershipRes?.data.map((member, i) => (
+            <TeamCard key={member.id} member={member} variant="leadership" index={i} />
+          ))}
+        </motion.div>
       </SectionWrapper>
 
       {/* Consultants */}

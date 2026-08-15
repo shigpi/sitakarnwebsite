@@ -14,6 +14,7 @@ export const navigationData: NavConfig = {
       href: '/services',
       children: [
         { label: 'Professional Advisory Services', href: '/services#advisory' },
+        { label: 'Real Estate Brokerage & Realtor Services', href: '/services#real-estate' },
       ],
     },
     { label: 'Team', href: '/team' },

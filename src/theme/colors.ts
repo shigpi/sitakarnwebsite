@@ -11,18 +11,18 @@
  */
 
 export const colors = {
-  // Primary — Muted Brick Red (matches logo's deep red)
+  // Primary — Logo Crimson Red (exact sRGB from Digital Color Meter)
   brick: {
-    50:  '#FDF4F4',
-    100: '#F5DADA',
-    200: '#E8B0B0',
-    300: '#D47575',
-    400: '#C04040',
-    500: '#A52020',
-    600: '#8B1A1A', // Main primary — matches logo red
-    700: '#6E1212',
-    800: '#500D0D',
-    900: '#330808',
+    50:  '#FFF0F1',
+    100: '#FFD0D4',
+    200: '#FFA3AB',
+    300: '#FF6373',
+    400: '#F03045',
+    500: '#CC1A2C',
+    600: '#A90415', // Main primary — exact logo red
+    700: '#850010',
+    800: '#60000C',
+    900: '#3D0008',
   },
 
   // Secondary — Deep Navy
