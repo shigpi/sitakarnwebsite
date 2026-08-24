@@ -13,8 +13,8 @@ export const navigationData: NavConfig = {
       label: 'Services',
       href: '/services',
       children: [
-        { label: 'Professional Advisory Services', href: '/services#advisory' },
         { label: 'Real Estate Brokerage & Realtor Services', href: '/services#real-estate' },
+        { label: 'Professional Advisory Services', href: '/services#advisory' },
       ],
     },
     { label: 'Team', href: '/team' },
