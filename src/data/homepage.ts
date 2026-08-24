@@ -9,7 +9,7 @@ export const heroData: HeroContent = {
   eyebrow: 'FINANCIAL ADVISORY · REAL ESTATE BROKERAGE · MORTGAGE SERVICES',
   headline: 'Nepal\'s Trusted Property & Financial Services Partner',
   subheadline:
-    'Sitakarn Mortgage Pvt. Ltd. is Nepal\'s pioneering professional firm — combining structured real estate brokerage with expert financial advisory for cooperatives and organizations. Transparent, technology-enabled, and legally compliant services from listing to title transfer.',
+    'Sitakarn Mortgage Pvt. Ltd. provides integrated real estate, property management, retirement & financial planning, and professional advisory services, helping individuals, families, investors, NRNs, property owners, and organizations buy, manage, protect, and grow their assets while building long-term financial security and sustainable value.',
   primaryCTA: { label: 'Explore Our Services', href: '/services' },
   secondaryCTA: { label: 'Book a Consultation', href: '/contact' },
 };
