@@ -36,6 +36,10 @@ export interface Service {
 export interface ServiceCategory {
   id: string;
   title: string;
+  /** One-line summary used in pillar cards and nav previews */
+  shortDescription: string;
+  /** Lucide icon name for the pillar card */
+  icon: string;
   description: string;
   services: Service[];
 }

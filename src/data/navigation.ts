@@ -1,9 +1,12 @@
 /**
  * Navigation Data
  * Centralized navigation structure. Edit here to update the navbar and sitemap.
+ * The Services dropdown children are auto-generated from servicesData — no manual
+ * sync needed. Add/rename a ServiceCategory and the nav updates automatically.
  */
 
 import type { NavConfig } from '@/types';
+import { servicesData } from '@/data/services';
 
 export const navigationData: NavConfig = {
   links: [
@@ -12,10 +15,10 @@ export const navigationData: NavConfig = {
     {
       label: 'Services',
       href: '/services',
-      children: [
-        { label: 'Real Estate Brokerage & Realtor Services', href: '/services#real-estate' },
-        { label: 'Professional Advisory Services', href: '/services#advisory' },
-      ],
+      children: servicesData.map((category) => ({
+        label: category.title,
+        href: `/services#${category.id}`,
+      })),
     },
     { label: 'Team', href: '/team' },
     { label: 'Contact', href: '/contact' },
