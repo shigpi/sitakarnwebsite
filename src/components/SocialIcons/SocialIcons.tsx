@@ -32,11 +32,17 @@ const SvgYoutube = ({ size }: { size: number }) => (
 const SvgTwitter = ({ size }: { size: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
 );
+const SvgTikTok = ({ size }: { size: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" stroke="none">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.31 6.31 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+  </svg>
+);
 
 const icons = [
   { key: 'facebook', icon: SvgFacebook, label: 'Facebook' },
   { key: 'linkedin', icon: SvgLinkedin, label: 'LinkedIn' },
   { key: 'instagram', icon: SvgInstagram, label: 'Instagram' },
+  { key: 'tiktok', icon: SvgTikTok, label: 'TikTok' },
   { key: 'youtube', icon: SvgYoutube, label: 'YouTube' },
   { key: 'x', icon: SvgTwitter, label: 'X (Twitter)' },
 ] as const;

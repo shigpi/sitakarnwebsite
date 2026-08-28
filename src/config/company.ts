@@ -31,8 +31,8 @@ export const company = {
   // Google Maps
   maps: {
     embedUrl:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.908!2d100.5197!3d13.7244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQzJzI3LjgiTiAxMDDCsDMxJzEwLjkiRQ!5e0!3m2!1sen!2sth!4v1234567890',
-    directionsUrl: 'https://goo.gl/maps/example',
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.678!2d85.3346!3d27.6972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19f86a31e451%3A0x3e8b7f3e3e8b7f3e!2sOld+Baneshwor%2C+Kathmandu+31%2C+Nepal!5e0!3m2!1sen!2snp!4v1724650000',
+    directionsUrl: 'https://maps.google.com/?q=Old+Baneshwor,+Kathmandu,+Nepal',
   },
 
   // Office Hours
@@ -44,9 +44,10 @@ export const company = {
 
   // Social Media
   social: {
-    facebook: 'https://facebook.com/sitakarnfinancial',
+    facebook: 'https://www.facebook.com/people/Sitakarn/61593752130608/',
     linkedin: 'https://linkedin.com/company/sitakarn',
-    instagram: 'https://instagram.com/sitakarnfinancial',
+    instagram: 'https://www.instagram.com/sitakarn.np',
+    tiktok: 'https://www.tiktok.com/@sitakarn.np',
     youtube: 'https://youtube.com/@sitakarnfinancial',
     x: 'https://x.com/sitakarnfin',
   },

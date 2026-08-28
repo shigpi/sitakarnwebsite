@@ -73,5 +73,5 @@ export const aboutCertifications = {
   eyebrow: 'Accreditation & Quality',
   title: 'Professional Standards & Compliance',
   description:
-    'Our practice is governed by the highest professional standards. Sitakarn maintains robust systems for tax compliance, AML/CFT, accounting, auditing, and secure data management — covering both our financial advisory and real estate brokerage operations under applicable Nepalese laws and regulatory requirements.',
+    'Sitakarn Mortgage Pvt. Ltd. (Reg. No. 26095/060/061, PAN No. 301629579) operates under the full regulatory framework of Nepal. Our financial advisory practice complies with Nepal Accounting Standards (NAS), Nepal Financial Reporting Standards (NFRS), Nepal Standards on Auditing (NSA), and the Cooperative Act 2074. Our real estate brokerage upholds AML/CFT requirements as per the Asset (Money) Laundering Prevention Act 2064 and Land Revenue Act 2034, with all transactions processed through formal banking channels. We maintain active relationships with the Institute of Chartered Accountants of Nepal (ICAN), the Inland Revenue Department (IRD), the Department of Cooperatives (DoC), and Nepal Rastra Bank (NRB).',
 };
